@@ -2,9 +2,8 @@
 import { jsx } from '@emotion/core';
 import * as icons from './svg';
 
-type IconType = keyof typeof icons;
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const iconTypes: IconType[] = Object.keys(icons) as any[]; // 스토리에서 불러오기 위함
+export type IconType = keyof typeof icons;
+export const iconTypes: IconType[] = Object.keys(icons) as IconType[]; // 스토리에서 불러오기 위함
 
 export type IconProps = {
   /** 사용 할 아이콘 타입 */
